@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blog | STUDIHARDWARE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg3d"></canvas>
+<div id="menu"></div>
+
+<main>
+  <section>
+    <h1>STUDIHARDWARE Blog</h1>
+    <p>
+      Insights, research notes, and conceptual articles about
+      AI, IT mathematics, blockchain systems, and computational structures.
+    </p>
+  </section>
+
+  <section>
+    <h2>Understanding AI & Mathematical Structures</h2>
+    <p>
+      Artificial intelligence relies heavily on mathematical foundations
+      such as linear algebra, probability theory, optimization, and logic.
+      At STUDIHARDWARE, we explore how these mathematical components
+      interact with real-world data and computational systems.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why IT Infrastructure Matters for AI</h2>
+    <p>
+      Efficient AI systems are not built on algorithms alone.
+      IT infrastructure, data pipelines, system architecture,
+      and computational scalability play a crucial role
+      in transforming mathematical models into practical solutions.
+    </p>
+  </section>
+
+  <section>
+    <h2>Blockchain as a Computational Layer</h2>
+    <p>
+      Blockchain technology introduces a transparent and verifiable
+      computation layer. STUDIHARDWARE examines how decentralized
+      networks can support AI research, data integrity,
+      and mathematical verification models.
+    </p>
+  </section>
+</main>
+
+<footer>
+  © 100% STUDIHARDWARE
+</footer>
+
+<script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+<script src="menu.js"></script>
+<script src="three-bg.js"></script>
+<script>
+fetch("menu.html")
+  .then(res => res.text())
+  .then(data => document.getElementById("menu").innerHTML = data);
+</script>
+
+</body>
+</html>
