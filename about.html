@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About | STUDIHARDWARE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg3d"></canvas>
+<div id="menu"></div>
+
+<main>
+  <section>
+    <h1>About STUDIHARDWARE</h1>
+    <p>
+      STUDIHARDWARE is an AI & IT Mathematics–focused research and development
+      ecosystem designed to explore how artificial intelligence, computation,
+      and mathematical structures can work together in modern digital systems.
+    </p>
+  </section>
+
+  <section>
+    <h2>Our Vision</h2>
+    <p>
+      We aim to build an open ecosystem where AI logic, mathematical models,
+      and information technology are combined to create transparent,
+      scalable, and future-ready systems for research, education,
+      and decentralized innovation.
+    </p>
+  </section>
+
+  <section>
+    <h2>AI & IT Mathematics</h2>
+    <p>
+      At the core of STUDIHARDWARE lies the integration of:
+      <br><br>
+      • Mathematical reasoning and logical structures  
+      <br>
+      • AI-driven data analysis and automation  
+      <br>
+      • IT infrastructure and computational efficiency  
+      <br><br>
+      These components form a structured framework where algorithms,
+      models, and systems evolve through continuous learning and optimization.
+    </p>
+  </section>
+
+  <section>
+    <h2>Blockchain & Research Direction</h2>
+    <p>
+      STUDIHARDWARE also explores decentralized systems and blockchain-based
+      research models, enabling transparent computation, open verification,
+      and community-driven innovation across AI and IT mathematics.
+    </p>
+  </section>
+</main>
+
+<footer>
+  © 100% STUDIHARDWARE
+</footer>
+
+<script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+<script src="menu.js"></script>
+<script src="three-bg.js"></script>
+<script>
+fetch("menu.html")
+  .then(res => res.text())
+  .then(data => document.getElementById("menu").innerHTML = data);
+</script>
+
+</body>
+</html>
