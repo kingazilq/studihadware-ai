@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>STUDIHARDWARE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg3d"></canvas>
+<div id="menu"></div>
+
+<main>
+  <section>
+    <h1>STUDIHARDWARE</h1>
+    <p>AI & IT Mathematics research ecosystem.</p>
+  </section>
+
+  <section>
+    <h2>Memecore Network</h2>
+    <p>
+      $M Token  
+      <br>
+      <a href="https://memecorescan.io/token/0xa5116947656f7f92473f9d4c1bce93a35a7b43b2">
+        0xa5116947656F7f92473F9d4C1bCE93a35a7b43B2
+      </a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  © 100% STUDIHARDWARE
+</footer>
+
+<script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+<script src="menu.js"></script>
+<script src="three-bg.js"></script>
+<script>
+fetch("menu.html").then(r=>r.text()).then(d=>{
+  document.getElementById("menu").innerHTML = d;
+});
+</script>
+</body>
+</html>
