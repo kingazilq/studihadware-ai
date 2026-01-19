@@ -1,52 +1,22 @@
-const scene = new THREE.Scene();
+const s=new THREE.Scene();
+const c=new THREE.PerspectiveCamera(75,innerWidth/innerHeight,.1,1000);
+c.position.z=5;
+const r=new THREE.WebGLRenderer({canvas:bg3d,alpha:true});
+r.setSize(innerWidth,innerHeight);
 
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-);
-camera.position.z = 5;
+const g=new THREE.BufferGeometry();
+const p=new Float32Array(1400*3);
+for(let i=0;i<p.length;i++)p[i]=(Math.random()-.5)*16;
+g.setAttribute("position",new THREE.BufferAttribute(p,3));
 
-const renderer = new THREE.WebGLRenderer({
-  canvas: document.getElementById("bg3d"),
-  alpha: true,
-  antialias: true
-});
+const m=new THREE.PointsMaterial({color:0xffffff,size:.02});
+const pts=new THREE.Points(g,m);
+s.add(pts);
 
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-const count = 1400;
-const positions = new Float32Array(count * 3);
-
-for (let i = 0; i < count * 3; i++) {
-  positions[i] = (Math.random() - 0.5) * 16;
+function a(){
+requestAnimationFrame(a);
+pts.rotation.y+=.0006;
+pts.rotation.x+=.0003;
+r.render(s,c);
 }
-
-const geometry = new THREE.BufferGeometry();
-geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-
-const material = new THREE.PointsMaterial({
-  color: 0xffffff,
-  size: 0.02,
-  opacity: 0.8,
-  transparent: true
-});
-
-const particles = new THREE.Points(geometry, material);
-scene.add(particles);
-
-function animate() {
-  requestAnimationFrame(animate);
-  particles.rotation.y += 0.0006;
-  particles.rotation.x += 0.0003;
-  renderer.render(scene, camera);
-}
-animate();
-
-window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
+a();
