@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Ecosystem | STUDIHARDWARE</title>
+<title>Ecosystem</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,26 +11,24 @@
 <div id="menu"></div>
 
 <main>
-  <section>
-    <h2>Ecosystem</h2>
-    <div class="ecosystem">
-      <img src="assets/ecosystem1.jpg">
-      <img src="assets/ecosystem2.jpg">
-      <img src="assets/ecosystem3.jpg">
-      <img src="assets/ecosystem4.jpg">
-    </div>
-  </section>
+<section>
+<h1>Ecosystem</h1>
+<div class="ecosystem">
+<img src="assets/ecosystem1.jpg">
+<img src="assets/ecosystem2.jpg">
+<img src="assets/ecosystem3.jpg">
+<img src="assets/ecosystem4.jpg">
+</div>
+</section>
 </main>
 
 <footer>© 100% STUDIHARDWARE</footer>
 
 <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script src="menu.js"></script>
 <script src="three-bg.js"></script>
-<script>
-fetch("menu.html").then(r=>r.text()).then(d=>{
-  document.getElementById("menu").innerHTML = d;
-});
-</script>
+<script src="script.js"></script>
 </body>
 </html>
